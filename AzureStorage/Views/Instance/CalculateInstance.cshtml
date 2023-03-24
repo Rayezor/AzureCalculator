@@ -1,0 +1,40 @@
+﻿@model AzureStorage.Models.Instance
+
+@{
+    ViewData["Title"] = "CalculateInstance";
+}
+
+<h1>Calculate Instance</h1>
+
+<h4>Instance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CalculateInstance">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="InstanceSize" class="control-label"></label>
+                @Html.DropDownList("InstanceSize")
+                <span asp-validation-for="InstanceSize" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="NoOfInsta" class="control-label"></label>
+                <input asp-for="NoOfInsta" class="form-control" />
+                <span asp-validation-for="NoOfInsta" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <h4>Predicted yearly instance cost ($): @ViewBag.Charge</h4>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
