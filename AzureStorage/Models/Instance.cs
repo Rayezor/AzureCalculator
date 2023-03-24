@@ -37,23 +37,23 @@ namespace AzureStorage.Models
                     {
                         charge = NoOfInsta * SmallCharge * 24 * 366;
                     }
-                    else if (InstanceSize == "Bus")
+                    else if (InstanceSize == "Medium")
                     {
                         charge = NoOfInsta * MediumCharge * 24 * 366;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "Large")
                     {
                         charge = NoOfInsta * LargeCharge * 24 * 366;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "Very Large")
                     {
                         charge = NoOfInsta * VeryLargeCharge * 24 * 366;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "A6")
                     {
                         charge = NoOfInsta * A6Charge * 24 * 366;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "A7")
                     {
                         charge = NoOfInsta * A7Charge * 24 * 366;
                     }
@@ -68,29 +68,29 @@ namespace AzureStorage.Models
                     {
                         charge = NoOfInsta * SmallCharge * 24 * 365;
                     }
-                    else if (InstanceSize == "Bus")
+                    else if (InstanceSize == "Medium")
                     {
                         charge = NoOfInsta * MediumCharge * 24 * 365;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "Large")
                     {
                         charge = NoOfInsta * LargeCharge * 24 * 365;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "Very Large")
                     {
                         charge = NoOfInsta * VeryLargeCharge * 24 * 365;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "A6")
                     {
                         charge = NoOfInsta * A6Charge * 24 * 365;
                     }
-                    else if (InstanceSize == "Goods")
+                    else if (InstanceSize == "A7")
                     {
                         charge = NoOfInsta * A7Charge * 24 * 365;
 
                     }
                 }
-                return charge;
+                return Math.Round(charge, 2);
             }
         }
     }
